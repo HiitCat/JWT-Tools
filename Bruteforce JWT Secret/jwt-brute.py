@@ -59,7 +59,7 @@ def main():
         description='This script checks each entry from a given file to see if it\'s a valid secret key for a given JWT (JSON Web Token).'
     )
     parser.add_argument('-t', '--token', required=True, help='Your JWT token')
-    parser.add_argument('-f', '--file', required=True, help='Your file with potential secret keys')
+    parser.add_argument('-f', '--file', help='Your file with potential secret keys')
     args = parser.parse_args()
 
     try:
@@ -68,7 +68,9 @@ def main():
             print(Fore.RED + "The JWT token is not using the HS256 algorithm.")
             return
 
-        valid_key = find_secret_key(args.token, args.file)
+        filepath = args.file if args.file else 'rockyou.txt'
+
+        valid_key = find_secret_key(args.token, filepath)
 
         if valid_key is not None:
             print(Fore.GREEN + "Found valid secret key: " + Style.RESET_ALL + f"{valid_key}")

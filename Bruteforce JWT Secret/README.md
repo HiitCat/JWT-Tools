@@ -35,6 +35,13 @@ Replace `[TOKEN]` with your JWT token and `[FILE]` with your file containing pot
 python3 jwt-brute.py -t eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibG9sIiwiaWF0IjoxNjg1OTkxMTUyfQ.5KL4Gq43dIiuHbmruad2uJex4GjjUonf1u8TeMT-vog -f rockyou.txt
 ```
 
+Output :
+
+```
+Checking secret 42/14344391 (0.00%) | 8775.57 checks/s
+Found valid secret key: secret
+```
+
 This script will iterate over each entry in the provided file and attempt to verify the JWT using that secret key. If a valid key is found, the script will print it out.
 
 Please use this script responsibly and ethically. Misuse can lead to legal consequences.
