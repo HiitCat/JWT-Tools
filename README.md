@@ -11,10 +11,6 @@ The tools are intended for educational purposes only. Misuse of these tools for 
 
 __More tools coming soon!__
 
-## 👨‍💻 Author
-
-- [Maxence ZOLNIERUCK](https://github.com/mxcezl)
-
 ## 📝 Requirements
 
 Each script may require specific Python packages to be installed. Please refer to the `requirements.txt` file in each tool's directory for exact package requirements.
